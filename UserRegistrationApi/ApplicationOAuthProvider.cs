@@ -33,7 +33,7 @@ namespace UserRegistrationApi
                 identity.AddClaim(new Claim("LoggedOn", DateTime.Now.ToString()));
                 identity.AddClaim(new Claim("PhoneNumber",user.PhoneNumber));
                identity.AddClaim(new Claim("Time", user.Time));
-                //identity.AddClaim(new Claim("ImageUrl", user.ImageUrl));
+                identity.AddClaim(new Claim("Id", user.Id));
                 context.Validated(identity);
             }
             else
